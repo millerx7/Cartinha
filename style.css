@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 10px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+/* MÚSICA------------------------------------------------ */
+
+.music-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%; /* Permite que o container ocupe toda a largura disponível */
+    margin: 0 15px;
+    margin-bottom: 60px;
+    min-height: 180px; /* Garante uma altura mínima para o container */
+    position: relative; /* Garante que o conteúdo seja posicionado corretamente */
+    z-index: 1; /* Certifique-se de que o container da música está acima de outros elementos */
+}
+
+/* Ajuste no botão */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative; /* Garante que o botão tenha seu próprio contexto de posicionamento */
+    z-index: 2; /* Certifica-se de que o botão está acima do conteúdo */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .music-container {
+        padding: 15px;
+        max-width: 100%;  /* Permite que ocupe toda a largura */
+        min-height: 180px; /* Aumenta a altura mínima para garantir que o conteúdo fique visível */
+    }
+
+    /* Ajuste no botão */
+    button {
+        padding: 12px 20px; /* Ajusta o tamanho do botão */
+        font-size: 14px; /* Diminui o tamanho da fonte para telas menores */
+    }
+}
+
+/* //MÚSICA------------------------------------------------ */
+
+
+/* CARTA DE AMOR---------------------------------------- */
+
+.container1 {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da cartinha */
+.letter h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.letter p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.signature {
+    font-style: italic;
+    text-align: right;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .letter h1 {
+        font-size: 2em;
+    }
+
+    .letter p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter h1 {
+        font-size: 1.8em;
+    }
+
+    .letter p {
+        font-size: 1em;
+    }
+}
+
+/* //CARTA DE AMOR---------------------------------------- */
+
+/* CARROSSEL DE FOTOS -------------------------------*/
+
+.carrossel {
+    width: 100%; /* Largura 100% para o carrossel ocupar a tela inteira */
+    max-width: 300px; /* Limita a largura máxima do carrossel em telas grandes (300px) */
+    height: 500px; /* Altura fixa de 500px */
+    overflow: hidden; /* Esconde as imagens que não estão visíveis */
+    margin: 50px auto;
+}
+
+.carrossel-container {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Efeito de transição suave */
+    width: 100%; /* Garantir que o container ocupe toda a largura do carrossel */
+}
+
+.carrossel-item {
+    width: 300px; /* Largura fixa de 300px */
+    height: 500px; /* Altura fixa de 500px */
+    flex-shrink: 0; /* Evita que as imagens encolham */
+}
+
+.carrossel-item img {
+    width: 100%; /* Imagem ocupa toda a largura do item */
+    height: 100%; /* Imagem ocupa toda a altura do item */
+    object-fit: cover; /* Faz com que a imagem cubra o espaço sem distorcer */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .carrossel {
+        width: 100%; /* Carrossel ocupa toda a largura da tela em tablets e celulares */
+        max-width: 250px; /* Limita a largura do carrossel em dispositivos menores */
+        height: 400px; /* Ajusta a altura para telas menores */
+    }
+
+    .carrossel-item {
+        width: 250px; /* Ajusta a largura das imagens para caber melhor em dispositivos móveis */
+        height: 400px; /* Ajusta a altura das imagens */
+    }
+}
+
+@media (max-width: 480px) {
+    .carrossel {
+        width: 100%; /* Carrossel ocupa toda a largura da tela em dispositivos ainda menores */
+        max-width: 200px; /* Limita ainda mais a largura em dispositivos muito pequenos */
+        height: 350px; /* Ajusta a altura das imagens */
+    }
+
+    .carrossel-item {
+        width: 200px; /* Ajusta a largura das imagens */
+        height: 350px; /* Ajusta a altura das imagens */
+    }
+}
+/* //CARROSSEL DE FOTOS -----------------------------------*/
+
+/* CONTAGEM DE DIAS -------------------------------------- */
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 10px;
+    margin-bottom: 70px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.time-count {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.time-count span {
+    color: #ff5733;
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    .time-count {
+        font-size: 1.3em;
+    }
+
+    .time-count span {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .time-count {
+        font-size: 1.2em;
+    }
+
+    .time-count span {
+        font-size: 1em;
+        display: block;  /* Empilha os números verticalmente */
+        margin-bottom: 5px;  /* Espaçamento entre os itens */
+    }
+}
+
+/* //CONTAGEM DE DIAS -------------------------------------- */

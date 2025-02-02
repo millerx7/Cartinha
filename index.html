@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloque a senha</title>
+    <link rel="shortcut icon" href="./assets/love_693401.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20240910/pngtree-celestial-dawn-surreal-cosmic-view-pc-wallpaper-image_16146438.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Adicionado um tamanho máximo para a largura */
+    margin: 20px; /* Garante que a página não fique colada nas bordas em telas pequenas */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Ajuste para melhor legibilidade */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Ajuste para melhor legibilidade */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Aumenta a largura em telas pequenas */
+    }
+
+    h1 {
+        font-size: 22px; /* Ajuste de tamanho da fonte para telas menores */
+    }
+
+    p {
+        font-size: 12px; /* Diminui o tamanho da fonte para a dica */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Ajusta o título para dispositivos bem pequenos */
+    }
+
+    input, button {
+        padding: 12px; /* Aumenta um pouco o tamanho dos campos em telas pequenas */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <h1>Você precisa de uma senha</h1>
+        <p>Dica: Leia o QRcode</p>
+        <input type="password" id="senha" placeholder="Digite a senha">
+        <button onclick="verificarSenha()">Confirmar</button>
+    </div>
+
+    <script>
+        function verificarSenha() {
+            const senhaCorreta = "10-06-2024"; // Exemplo de senha (data de nascimento)
+            const senhaDigitada = document.getElementById('senha').value;
+
+            if (senhaDigitada === senhaCorreta) {
+                // Redireciona para outra página, caso a senha esteja correta
+                window.location.href = "pagina.html";
+            } else {
+                // Exibe alerta caso a senha esteja errada
+                alert("Senha incorreta, tente novamente!");
+            }
+        }
+    </script>
+</body>
+</html>

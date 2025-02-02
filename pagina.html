@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/love_693401.png" type="image/x-icon">
+    <title>Conteudo sensivel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJSFUmgnzuw-8NXg16w8l-k4-nnsIE6G6EhzaYICn6BOPlNBUKg50GOFZ3&s=10);
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .sim {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .sim:hover {
+            background-color: #45a049;
+        }
+        .nao {
+            background-color: #f44336;
+            color: white;
+        }
+        .nao:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Conteúdo sensivel, deseja continuar?</h1>
+        <button class="sim" onclick="vaiParaProximaPagina()">Sim</button>
+        <button class="nao" onclick="mostrarAlerta()">Não</button>
+    </div>
+
+    <script>
+        function vaiParaProximaPagina() {
+            // Aqui você pode substituir o link com a URL da próxima página
+            window.location.href = "carta.html"; // Coloque a URL real da próxima página
+        }
+
+        function mostrarAlerta() {
+            alert("Não foi dessa vez, crie coragem e tente novamente");
+            window.location.href = "index.html"; // Isso vai recarregar a página atual, retornando ao início
+        }
+    </script>
+
+</body>
+</html>
