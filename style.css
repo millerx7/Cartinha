@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 1500px;
     text-align: center;
     padding: 10px;
 }
@@ -32,8 +32,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 100%; /* Permite que o container ocupe toda a largura disponível */
-    margin: 0 15px;
-    margin-bottom: 60px;
+    margin: auto auto;
+    margin-bottom: 25px;
     min-height: 180px; /* Garante uma altura mínima para o container */
     position: relative; /* Garante que o conteúdo seja posicionado corretamente */
     z-index: 1; /* Certifique-se de que o container da música está acima de outros elementos */
@@ -41,6 +41,7 @@ body {
 
 /* Ajuste no botão */
 button {
+    margin-top: 20px;
     padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
@@ -63,7 +64,7 @@ button {
 
     /* Ajuste no botão */
     button {
-        padding: 12px 20px; /* Ajusta o tamanho do botão */
+     
         font-size: 14px; /* Diminui o tamanho da fonte para telas menores */
     }
 }
